@@ -1,0 +1,16 @@
+[package]
+name = "game-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.8.4"
+combat-engine = { path = "../combat-engine" }
+bevy_ecs = { version = "0.15", features = ["multi_threaded", "trace"] }
+bevy_internal = { version = "0.15", features = ["sysinfo_plugin", "multi_threaded"] }
+bytes = "1"
+prometheus = { version = "0.14", features = ["process"] }
+rand = "0.9.0"
+chrono = "0.4"
+tokio = { version = "1.45", features = ["macros", "rt", "rt-multi-thread"] }
+once_cell = "1.21.3"

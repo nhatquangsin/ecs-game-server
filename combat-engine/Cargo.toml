@@ -1,0 +1,22 @@
+[package]
+name = "combat-engine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy_app = "0.15"
+bevy_ecs = { version = "0.15", features = ["multi_threaded"] }
+bevy_transform = "0.15"
+once_cell = "1"
+rand = "0.9.0"
+bevy_reflect = "0.15"
+envconfig = "0.11.0"
+strum = "0.27.1"
+strum_macros = "0.27.1"
+parry2d = { version = "0.18"}
+bitflags = "2.4"
+
+serde = { workspace = true }
+serde_json = { workspace = true }
+bevy_internal = { workspace = true }
+regex = "1.11.1"
