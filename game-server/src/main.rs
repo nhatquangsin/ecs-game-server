@@ -1,4 +1,6 @@
 mod app;
+mod plugins;
+mod shared_systems;
 
 use tokio::runtime::Runtime;
 

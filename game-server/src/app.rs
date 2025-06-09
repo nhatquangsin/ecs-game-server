@@ -42,16 +42,15 @@ pub fn start_bevy_app() {
     //     .add_plugins(GameStatePlugin)
     //     .add_plugins(LobbyPlugin)
     //     .add_plugins(MetricPlugin);
-    
+
     // app.add_systems(Startup, ready);
 
     app.run();
 }
 
 pub async fn start_http_server() {
-    let app = Router::new()
-        .route("/ping", get(|| async { "pong" }));
-        // .route("/metrics", get(metrics));
+    let app = Router::new().route("/ping", get(|| async { "pong" }));
+    // .route("/metrics", get(metrics));
 
     let metric_host = std::env::var("METRIC_HOST").unwrap_or("0.0.0.0".to_owned());
     let metric_port = std::env::var("METRIC_PORT").unwrap_or("9669".to_owned());
